@@ -1,0 +1,14 @@
+prefix=mac_x86_64
+exec_prefix=${prefix}
+libdir=mac_x86_64/lib
+includedir=mac_x86_64/include
+
+Name: libavutil
+Description: FFmpeg utility library
+Version: 57.7.100
+Requires: 
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavutil -pthread -lm -framework VideoToolbox -framework CoreFoundation -framework CoreMedia -framework CoreVideo -framework CoreServices
+Libs.private: 
+Cflags: -I${includedir}

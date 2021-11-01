@@ -1,0 +1,14 @@
+prefix=mac_x86_64
+exec_prefix=${prefix}
+libdir=mac_x86_64/lib
+includedir=mac_x86_64/include
+
+Name: libavcodec
+Description: FFmpeg codec library
+Version: 59.12.100
+Requires: libswresample >= 4.0.100, libavutil >= 57.7.100
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavcodec -liconv -lm -lz -framework AudioToolbox -pthread -framework VideoToolbox -framework CoreFoundation -framework CoreMedia -framework CoreVideo -framework CoreServices
+Libs.private: 
+Cflags: -I${includedir}
